@@ -85,7 +85,7 @@ const per_page = 3;
 let paginaAtual = 1;
 let totalPages = 1;
 let dadosLogin = {};
-let dadoscadastro = {};
+let dadosCadastro = {};
 // Função para lidar com o evento de login
 function logar(event){
     event.preventDefault();
@@ -110,14 +110,14 @@ function cadastrar(event){
     const email = form.mail.value;
     const senha = form.password.value;
     const nome = form.name.value;
-    dadoscadastro = {
+    dadosCadastro = {
         email: email,
         senha: senha,
         nome: nome
     };
-    console.log(dadoscadastro);
+    console.log(dadosCadastro);
 
-   cadastrarUser(dadoscadastro); 
+   cadastrarUser(); 
 }
 
 // Funções de navegação de páginas
@@ -202,23 +202,25 @@ function buscarDados(dadosLogin) {
 }
 
 // Função para cadastrar um novo usuário
-function cadastrarUser() {
-    
-        axios.post(`https://api-crudde-recados.onrender.com/users/cadastrar`, dadoscadastro)
-            .then(response => {
-                response.status(201)
-              
-            })
-            .catch(error => {
-                console.error('Dados Incorretos:', error);
-              
-                const alert = document.getElementById('alert');
-                alert.innerHTML = ` <div class="alert alert-danger mt-2 text-center" role="alert">
-               Dados incorretos
-              </div>`
-              
-            });
+async function cadastrarUser() {
+    try {
+        console.log(dadosCadastro);
+        const response = await axios.post(`https://api-crudde-recados.onrender.com/users/cadastrar`, dadosCadastro);
+        
+        if (response.status === 201) {
+            // Fazer algo após o cadastro bem-sucedido
+        }
+    } catch (error) {
+        console.error('Dados Incorretos:', error);
+        
+        const alert = document.getElementById('alert');
+        alert.innerHTML = `
+            <div class="alert alert-danger mt-2 text-center" role="alert">
+                Dados incorretos
+            </div>`;
     }
-    
+}
+
+
 
 
