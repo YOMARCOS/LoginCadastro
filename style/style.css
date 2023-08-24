@@ -1,0 +1,22 @@
+*{
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+body{
+    display:flex;  flex-direction: column; justify-content:center ; 
+}
+.bg-prime{
+    background-image:linear-gradient(rgb(82, 62, 238),rgb(108, 28, 194))
+}
+fieldset{
+    border: 1px solid grey;
+}
+main{
+    width: 100%;
+   background: #f1f7ff;
+   padding-bottom: 5%;
+
+}
+input{
+    border-radius: 5px;
+    border: 1px solid grey;
+}
