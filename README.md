@@ -1,4 +1,3 @@
-Claro, aqui está o exemplo do README.md com emoticons:
 
 ```markdown
 # 📝 Яecados
