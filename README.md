@@ -24,9 +24,8 @@ O Яecados é uma plataforma de compartilhamento de recados que permite que os u
 
 ## 🎥 Demonstração
 
-[Link para a demonstração ao vivo](https://yomarcos.github.io/LoginCadastro/)
+Acesse o projeto em: https://yomarcos.github.io/LoginCadastro/
 
-![Screenshot](./assets/Captura%20de%20tela%202023-08-24%20095516.png)
 
 ## 🚀 Recursos
 
